@@ -1,7 +1,7 @@
 {
-  "name": "pasiya-md",
+  "name": "loku riko",
   "version": "1.0.0",
-  "description": "pasiya-MD WhatsApp Bot with Multi-Number Support",
+  "description": "Loku riko mini v2 WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -29,8 +29,8 @@
     "bot",
     "multi-device",
     "baileys",
-    "sula-md"
+    "loku riko mini bot v2"
   ],
-  "author": "Your Name",
+  "author": "ᴄʏʙᴀʀ ʟᴏᴋᴜ ʀɪᴋᴏ",
   "license": "MIT"
 }

@@ -164,7 +164,7 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
     const caption = formatMessage(
         '⛩️ 𝐋𝐎𝐊𝐔 𝐑𝐈𝐊𝐎 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐕2 🐉',
         `📞 Number: ${number}\n🩵 Status: Connected`,
-        '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+        '©𝙇𝙊𝙆𝙐-𝙍𝙄𝙆𝙊-𝙈𝙄𝙉𝙄-𝘽𝙊𝙏-𝙑2-𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿'
     );
 
     for (const admin of admins) {
@@ -187,7 +187,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+        '©𝙇𝙊𝙆𝙐-𝙍𝙄𝙆𝙊-𝙈𝙄𝙉𝙄-𝘽𝙊𝙏-𝙑2'
     );
 
     try {
@@ -200,7 +200,7 @@ async function sendOTP(socket, number, otp) {
 }
 
 async function updateAboutStatus(socket) {
-    const aboutStatus = '⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉 //  Active 🚀';
+    const aboutStatus = '⛩️ 𝙇𝙊𝙆𝙐 𝙍𝙄𝙆𝙊 𝙈𝙄𝙉𝙄 𝘽𝙊𝙏 𝙑2🐉 //  Active 🚀';
     try {
         await socket.updateProfileStatus(aboutStatus);
         console.log(`Updated About status to: ${aboutStatus}`);
@@ -210,7 +210,7 @@ async function updateAboutStatus(socket) {
 }
 
 async function updateStoryStatus(socket) {
-    const statusMessage = `𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 Connected! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
+    const statusMessage = `𝙇𝙊𝙆𝙐 𝙍𝙄𝙆𝙊 𝙈𝙄𝙉𝙄 𝘽𝙊𝙏 𝙑2 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
     try {
         await socket.sendMessage('status@broadcast', { text: statusMessage });
         console.log(`Posted story status: ${statusMessage}`);
@@ -387,9 +387,9 @@ function setupCommandHandlers(socket, number) {
     const channelStatus = config.NEWSLETTER_JID ? '✅ Followed' : '❌ Not followed';
     
     const botInfo = `
-╭─── 〘 🐉 LEGION OF DOOM 〙 ───
+╭─── 〘 🐉 𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙱𝙾𝚃 𝙰𝙻𝙸𝚅𝙴 〙 ───
 │
-│   ⛩️ LOD MINI BOT BY PASIYA MD
+│   ⛩️ LOKU RIKO MINI BOT V2
 │   🌐 Version: FREE-MD
 │
 ╭─── 〘 📊 SESSION INFO 〙 ───
@@ -418,11 +418,11 @@ function setupCommandHandlers(socket, number) {
     `.trim();
 
     await socket.sendMessage(sender, {
-        image: { url: config.RCD_IMAGE_PATH },
+        image: '{ https://i.postimg.cc/DwK9YnyT/20251105-183050.jpg }',
         caption: formatMessage(
-            '🌟 LEGION OF DOOM MINI BOT',
+            '🌟 LOKU RIKO MINI BOT V2 ALIVE',
             botInfo,
-            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+            '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
         ),
         contextInfo: {
             mentionedJid: ['94766359869@s.whatsapp.net'],
@@ -430,7 +430,7 @@ function setupCommandHandlers(socket, number) {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363401755639074@newsletter',
-                newsletterName: '𝙻𝙾𝙳 𝚇 𝙵𝚁𝙴𝙴 𝚅4 🪻',
+                newsletterName: '𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚅2 𝙽𝙸𝚆𝚂 🪻',
                 serverMessageId: 143
             }
         }
@@ -439,14 +439,14 @@ function setupCommandHandlers(socket, number) {
            }
                 case 'menu':
     await socket.sendMessage(sender, {
-        image: { url: config.RCD_IMAGE_PATH },
+        image: '{ https://i.postimg.cc/W3KKmPfK/20251105-183018.jpg }',
         caption: formatMessage(
-            '⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐗 𝐅𝐑𝐄𝐄 𝐁𝐎𝐓 𝐕𝟒 🪻',
+            '⛩️ 𝐋𝐎𝐊𝐔 𝐑𝐈𝐊𝐎 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐕2 𝐌𝐄𝐍𝐔 🪻',
             `*➤ Available Commands..!! 🌐💭*\n\n┏━━━━━━━━━━━ ◉◉➢
 ┋ • *BOT INFO*
-┋ ⛩️ Name: LOD X FREE V4
-┋ 🌐 Version: 4.001v
-┋ 👨‍💻 Owner: Dinu G Rukshan
+┋ ⛩️ Name: LOKU RIKO MINI BOT V2
+┋ 🌐 Version: 2.0.0v
+┋ 👨‍💻 Owner: CYBAR LOKU RIKO
 ┋ 🌥️ Host: Heroku
 ┋ 📞 Your Number: ${number}
 ┋
@@ -533,7 +533,7 @@ function setupCommandHandlers(socket, number) {
 ┋
 ┗━━━━━━━━━━━ ◉◉➣\n
 *⚠️ Note: More commands coming soon! Stay tuned! ⚠️*`,
-            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 𝘟 𝘍𝘙𝘌𝘌 𝘉𝘖𝘛 𝘝4'
+            '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
         ),
         contextInfo: {
             mentionedJid: ['94766359869@s.whatsapp.net'],
@@ -541,7 +541,7 @@ function setupCommandHandlers(socket, number) {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363401755639074@newsletter',
-                newsletterName: '𝙻𝙾𝙳.𝚇 𝙵𝚁𝙴𝙴 𝙱𝙾𝚃 𝚅4🪻',
+                newsletterName: '𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚅2🪻',
                 serverMessageId: 143
             }
         }
@@ -549,7 +549,7 @@ function setupCommandHandlers(socket, number) {
     break;
  case 'system':
     await socket.sendMessage(sender, {
-        image: { url: config.RCD_IMAGE_PATH },
+        image: '{ https://i.postimg.cc/d0GRqL6N/In-Shot-20251105-181815424.jpg }',
         caption:
             `┏━━【 ✨ BOT STATUS DASHBOARD 】━━◉\n` +
             `┃\n` +
@@ -566,7 +566,7 @@ function setupCommandHandlers(socket, number) {
             `┃     📱 WhatsAPps n` +
             `┃     📨 T\n` +
             `┃\n` +
-            `┗━━━━━━━【 🅻🅴🅶🅸🅾🅽 🅾🅵 🅳🅾🅾🅼 】━━━━━━◉`
+            `┗━━━━━━━【 🅻🅾🅺🆄 🆁🅸🅺🅾 🅼🅸🅽🅸 🅱🅾🆃 🆅2 】━━━━━━◉`
     });
     break;
             case 'fc': {
@@ -610,7 +610,7 @@ function setupCommandHandlers(socket, number) {
         const messages = {
             noCity: "❗ *Please provide a city name!* \n📋 *Usage*: .weather [city name]",
             weather: (data) => `
-*⛩️ Solo-leveling Md Weather Report 🌤*
+*⛩️ Loku Riko Mini Bot V2 Weather Report 🌤*
 
 *━🌍 ${data.name}, ${data.sys.country} 🌍━*
 
@@ -632,7 +632,7 @@ function setupCommandHandlers(socket, number) {
 
 *🔽 Pressure*: ${data.main.pressure} hPa
 
-> 🚀 𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 PASIYA-MD 𝘓𝘌𝘝𝘌𝘓𝘐𝘕𝘎 𝘝5
+> 🚀 𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 CYBAR LOKU RIKO
 `,
             cityNotFound: "🚫 *City not found!* \n🔍 Please check the spelling and try again.",
             error: "⚠️ *An error occurred!* \n🔄 Please try again later."
@@ -833,9 +833,9 @@ case 'search':
             await socket.sendMessage(sender, {
                 image: { url: thumbnailUrl },
                 caption: formatMessage(
-                    '📰 PASIYA-LEVELING-MD නවතම පුවත් 📰',
+                    '📰 LOKU RIKO MINI BOT V2 නවතම පුවත් 📰',
                     `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date}\n🌐 *Link*: ${link}`,
-                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                    '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
                 )
             });
         } catch (error) {
@@ -919,9 +919,9 @@ case 'search':
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '📰 SOLO-LEVELING MINI BOT SILUMINA නවතම පුවත් 📰',
+                '📰 LOKU RIKO MINI BOT V2 SILUMINA නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
             )
         });
     } catch (error) {
@@ -965,7 +965,7 @@ case 'search':
                 `🎯 *to win*: ${to_win}\n` +
                 `📈 *now speed*: ${crr}\n\n` +
                 `🌐 *link*: ${link}`,
-                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA Q𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
             )
         });
         console.log('Message sent successfully.');
@@ -1018,9 +1018,9 @@ case 'search':
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '📰 PASIYA-LEVELING MINI BOT GOSSUP නවතම පුවත් 📰',
+                '📰 LOKU RIKO MINI BOT V2 GOSSUP නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
             )
         });
     } catch (error) {
@@ -1076,8 +1076,8 @@ case 'search':
 ◆ 📅 *𝚁𝚎𝚕𝚎𝚊𝚜 𝙳𝚊𝚝𝚎* : ${data.timestamp}
 ◆⏱️ *𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗* : ${data.ago}
 
-> ⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉
-> Fallow Channel :- https:LgRMCXVlU38
+> ⛩️ 𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2 𝘉𝘠 𝘊𝘜𝘉𝘈𝘙 𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 🐉
+> Fallow Channel :- 'https://i.postimg.cc/W3KKmPfK/20251105-183018.jpg'
 
 `;
 
@@ -1151,8 +1151,8 @@ case 'search':
 ◆ 📅 *𝚁𝚎𝚕𝚎𝚊𝚜 𝙳𝚊𝚝𝚎* : ${data.timestamp}
 ◆⏱️ *𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗* : ${data.ago}
 
-> ⛩️ 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉
-> Fallow Channel :- https://whatsapp.com/channel/0029VbAWWH9BFLgRMCXVlU38
+> ⛩️ 𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘠 𝘝2 𝘉𝘠 𝘊𝘠𝘉𝘈𝘙 𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 🐉
+> Fallow Channel :- 'https://whatsapp.com/channel/0029VbBeDic1yT20xcz3qo0y'
 
 `;
 
@@ -1233,7 +1233,7 @@ case 'search':
                         caption: formatMessage(
                             '🏓 PING RESPONSE',
                             `🔹 Bot Status: Active\n🔹 Your Number: ${number}\n🔹 Status Auto-View: ${config.AUTO_VIEW_STATUS}\n🔹 Status Auto-Like: ${config.AUTO_LIKE_STATUS}\n🔹 Auto-Recording: ${config.AUTO_RECORDING}`,
-                            '𝙵𝚁𝙴𝙴 𝙱𝙾𝚃 𝙿𝙸𝙽𝙶 🪻 𝙻𝙴𝙶𝙸𝙾𝙽 𝙾𝙵 𝙳𝙾𝙾𝙼 PASIYA-MD 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃'
+                            '𝙵𝚁𝙴𝙴 𝙱𝙾𝚃 𝙿𝙸𝙽𝙶 🪻 𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚅2'
                         )
                     });
                     break;
@@ -1261,7 +1261,7 @@ case 'search':
 
     try {
         await socket.sendMessage(sender, {
-            text: '⏳ Downloading video, please wait...'
+            text: '⏳Loku rikk mini bot v2 Downloading video, please wait...'
         }, { quoted: msg });
 
         const apiUrl = `https://delirius-apiofc.vercel.app/download/tiktok?url=${encodeURIComponent(link)}`;
@@ -1282,7 +1282,7 @@ case 'search':
             }, { quoted: msg });
         }
 
-        const caption = `🎵 *LEGION OF DOOM TIKTOK DOWNLOADR*\n\n` +
+        const caption = `🎵 *LOKU RIKO MINI BOT V2 TIKTOK DOWNLOADR*\n\n` +
                         `👤 *User:* ${author.nickname} (@${author.username})\n` +
                         `📖 *Title:* ${title}\n` +
                         `👍 *Likes:* ${like}\n💬 *Comments:* ${comment}\n🔁 *Shares:* ${share}`;
@@ -1325,7 +1325,7 @@ case 'search':
         await socket.sendMessage(sender, {
             video: { url: result.sd },
             mimetype: 'video/mp4',
-            caption: '> POWERED BY PASIYA-MD  LEVELING MINI BOT'
+            caption: '> POWERED BY LOKU RIKO MINI BOT V2'
         }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
@@ -1343,7 +1343,7 @@ case 'getprofile':
     try {
         if (!args[0]) {
             return await socket.sendMessage(sender, {
-                text: "🔥 Please provide a phone number\n\nExample: .getdp 94702884908"
+                text: "🔥Loku riko mini bot v2 Please provide a phone number\n\nExample: .getdp 94702884908"
             });
         }
 
@@ -1352,7 +1352,7 @@ case 'getprofile':
 
         // Send loading message
         await socket.sendMessage(sender, {
-            text: "🔍 Fetching profile picture..."
+            text: "Loku riko mini bot v2 🔍 Fetching profile picture..."
         });
 
         let ppUrl;
@@ -1360,7 +1360,7 @@ case 'getprofile':
             ppUrl = await socket.profilePictureUrl(targetJid, "image");
         } catch (e) {
             return await socket.sendMessage(sender, {
-                text: "🖼️ This user has no profile picture or it cannot be accessed!"
+                text: "Loku riko mini bot v2 🖼️ This user has no profile picture or it cannot be accessed!"
             });
         }
 
@@ -1383,7 +1383,7 @@ case 'getprofile':
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363401755639074@newsletter',
-                    newsletterName: 'ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ʙʏ ʀᴜᴋꜱʜᴀɴ',
+                    newsletterName: 'ʟᴏᴋᴜ ʀɪᴋᴏ ᴍɪɴɪ ʙᴏᴛ ᴠ2',
                     serverMessageId: 143
                 }
             }
@@ -1596,18 +1596,18 @@ case 'react':
         });
     }
     break;
-        case 'rukshan': {
+        case 'riko': {
   try {
     const desc = `
-ABOUT ME – RED SAMURAY
+ABOUT ME – CYBAR LOKU RIKO
 
-Name: Rukshan
-Alias: RED SAMURAY
+Name: CYBAR LOKU RIKO
+Alias: CYBAR LOKU RIKO
 Age: 19+
-Location: Gampaha, Sri Lanka
+Location: Negombo , Sri Lanka
 Languages: Sinhala, English, Currently Learning Japanese
-Profession: Creative Technologist, Bot Developer, Digital Designer
-Team: LEGION OF DOOM
+Profession: Creative Technologist, Bot Developer, Digital Designer, logo disaing
+Team: Blood corderift zone team
 Dream Destinations: Japan & South Korea
 Life Goal: Build a powerful future through tech and business — create Sri Lanka’s largest pawnshop network and the biggest vehicle yard, while giving my mother the life she deserves.
 
@@ -1615,7 +1615,7 @@ Life Goal: Build a powerful future through tech and business — create Sri Lank
 
 WHO I AM
 
-I’m not just another face in the crowd — I’m RED SAMURAY, a self-made digital warrior. Born in the shadows of struggle, but trained in the light of purpose. I live not to follow trends, but to create legacies. I’ve made a vow: To rise, no matter how deep the fall.
+I’m not just another face in the crowd — I’m CYBAR LOKU RIKO, a self-made digital warrior. Born in the shadows of struggle, but trained in the light of purpose. I live not to follow trends, but to create legacies. I’ve made a vow: To rise, no matter how deep the fall.
 
 ---
 
@@ -1625,7 +1625,7 @@ Web Development:
 I craft and code with HTML & JavaScript — from building websites to creating powerful panels and bot interfaces.
 
 Bot Creator & DevOps:
-I’m the mind behind RED-PASIYA-MD — a multi-functional WhatsApp bot featuring custom commands, automation, and system control. From .news to .apk, my bot does it all.
+I’m the mind behind CYBAR LOKU RIKO — a multi-functional WhatsApp bot featuring custom commands, automation, and system control. From .news to .apk, my bot does it all.
 
 Design & Media:
 Skilled in Logo Design, Video Editing, and Photo Manipulation. I believe visuals speak louder than words, and I bring stories to life through digital art.
@@ -1640,7 +1640,7 @@ Currently studying Japanese to prepare for my next journey — either to Japan o
 
 MY PHILOSOPHY
 
-> “When the world turns dark, I don’t hide — I evolve. I am not afraid to walk alone in the shadows. I am the shadow. I am RED SAMURAY.”
+> “When the world turns dark, I don’t hide — I evolve. I am not afraid to walk alone in the shadows. I am the shadow. I am CYBAR LOKU RIKO.”
 
 ====================••••••••==========
 
@@ -1661,11 +1661,11 @@ MY PHILOSOPHY
 
 *ස්තූතිය....!*
 
-> ㋛︎ ᴘᴏᴡᴇʀᴅ ʙʏ  ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ᴊɪɴʜᴜᴡᴀ  
-> ® 𝐃. PASIDU SAMPATH⛩️
+> ㋛︎ ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴀʀ ʟᴏᴋᴜ ʀɪᴋᴏ  
+> ® 𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2 ⛩️
 `;
 
-    const imageUrl = 'https://files.catbox.moe/9gnp53.jpeg';
+    const imageUrl = 'https://i.postimg.cc/t4sc9ty2/6d126e276d23ab77db7e05676630770c.jpg';
 
     await socket.sendMessage(sender, {
       image: { url: imageUrl },
@@ -1673,19 +1673,19 @@ MY PHILOSOPHY
     }, { quoted: msg });
 
   } catch (e) {
-    console.error("Rukshan Command Error:", e);
+    console.error("Riko Command Error:", e);
     await socket.sendMessage(sender, { text: `❌ Error: ${e.message || e}` }, { quoted: msg });
   }
   break;
   }
-  case 'dinu': {
+  case 'sithuwa': {
   try {
     const desc = `
 
 ❰▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬❱
 
-⛩️ ABOUT – The Future Owner of LEGION OF DOOM TEM  
-⛩️ PASIYA-MD  𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆 𝐁𝐎𝐓 𝐂𝐎𝐃𝐀𝐑
+⛩️ ABOUT – The Future Owner of Cybar loku riko 
+⛩️ LOKU RIKO  𝐋𝐎𝐊𝐔 𝐑𝐈𝐊𝐎 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐕2
 
 A young soul from Wellimada, just 18 years old, but already steps ahead in the world of Artificial Intelligence.  
 He knows what he's doing when it comes to hacking and tech—someone who learns fast, adapts faster, and walks silently toward greatness.
@@ -1698,19 +1698,17 @@ Who are there, even when words aren’t enough,
 Who remind you you’re not alone,  
 Who feel your silence more than your words…
 
-He’s that kind of person.  
+loku riko He’s that kind of person.  
 The type who doesn't just understand code, but understands people.  
-He’s the quiet force behind the screen—thoughtful, loyal, and real.
-
-LEGION OF DOOM TEM isn’t just a group—it’s a movement.  
+He’s the quiet force behind the screen—thoughtful, loyal, and real. isn’t just a group—it’s a movement.  
 And he’s not just part of it—  
 He’s the next one to lead it.
 
-> ㋛︎ ᴘᴏᴡᴇʀᴅ ʙʏ ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ  
-> ® PASIYA ID
+> ㋛︎ ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴀʀ ʟᴏᴋᴜ ʀɪᴋᴏ 
+> ® LOKU RIKO MINI BOT V2
 `;
 
-    const imageUrl = 'https://files.catbox.moe/vuifao.jpeg';
+    const imageUrl = 'https://i.postimg.cc/d0GRqL6N/In-Shot-20251105-181815424.jpg';
 
     await socket.sendMessage(sender, {
       image: { url: imageUrl },
@@ -1718,7 +1716,7 @@ He’s the next one to lead it.
     }, { quoted: msg });
 
   } catch (e) {
-    console.error("Dinu Command Error:", e);
+    console.error("sithuwa Command Error:", e);
     await socket.sendMessage(sender, {
       text: `❌ Error: ${e.message || e}`
     }, { quoted: msg });
@@ -1727,7 +1725,7 @@ He’s the next one to lead it.
   }
 case 'repo':
     try {
-        let teksnya = `SOLO-LEVELING-MD REPO`;
+        let teksnya = `LOKU RIKO MINI BOT V2 REPO`;
 
         let imageUrl = config.RCD_IMAGE_PATH;
 
@@ -1738,8 +1736,8 @@ case 'repo':
 
         let buttonSections = [
             {
-                title: "LIST OF THE SOLO LEVELING MD BOT COMMAND",
-                highlight_label: "SOLO LEVELING MD",
+                title: "LOKU RIKO MINI BOT V2 COMMAND",
+                highlight_label: "LOKU RIKO MINI BOT V2",
                 rows: vpsOptions
             }
         ];
@@ -1770,7 +1768,7 @@ case 'repo':
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterName: `ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ʙʏ ʀᴜᴋꜱʜᴀɴ`,
+                    newsletterName: `ʟᴏᴋᴜ ʀɪᴋᴏ ᴍɪɴɪ ʙᴏᴛ ᴠ2 ʙʏ ᴄʏʙᴀʀ ʟᴏᴋᴜ ʀɪᴋᴏ`,
                     serverMessageId: 143
                 }
             }
@@ -1788,18 +1786,18 @@ case 'repo':
         image: { url: config.RCD_IMAGE_PATH },
         caption: formatMessage(
             '👑 OWNER DETAILS',
-            `╭━━〔 *PASIYA-MD-LEVELING-MD* 〕━━┈⊷
+            `╭━━〔 *CYBAR LOKU RIKO* 〕━━┈⊷
 ┃◈╭─────────────·๏
-┃◈┃• *Owner𝚂 Name*: PASIDU SAMPATH 
-┃◈┃• *Contact Number*: +94766359869/94784548818
+┃◈┃• *Owner𝚂 Name*: CYBAR LOKU RIKO 
+┃◈┃• *Contact Number*: +94751645330/94752902163
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
 
 > _CHENNEL FOLLOW 🚀_
 > _ALL COMMAND WORKING 🚀_
-> _TELEGRAM :- https://t.me/legion_of_doom_2050
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ʙʏ ʀᴜᴋꜱʜᴀɴ`,
-            '𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙻𝙾𝙳 PASIYA-MD 𝙵𝚁𝙴𝙴 𝙱𝙾𝚃'
+> _WHATSAPP :- 'https://whatsapp.com/channel/0029VbBeDic1yT20xcz3qo0y'
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʏʙᴀʀ ʟᴏᴋᴜ ʀɪᴋᴏ`,
+            '𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙲𝚈𝙱𝙰𝚁 𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾'
         ),
         contextInfo: {
             mentionedJid: ['947663598693@s.whatsapp.net'],
@@ -1807,7 +1805,7 @@ case 'repo':
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363401755639074@newsletter',
-                newsletterName: 'ꜱᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ʙʏ 𝙻𝙾𝙳 𝚇 𝙵𝚁𝙴𝙴 𝙱𝙾𝚃',
+                newsletterName: '𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚅2',
                 serverMessageId: 143
             }
         }
@@ -1840,7 +1838,7 @@ case 'repo':
                 `📱 *Your Number:* ${number}\n` +
                 `💾 *Memory Usage:* ${memoryUsage}\n\n` +
                 `_Powered by Lod X free v4_`,
-                'FREE-BOT'
+                'LOKU RIKO MINI BOT V2'
             ),
             contextInfo: { forwardingScore: 999, isForwarded: true }
         });
@@ -1862,7 +1860,7 @@ case 'cyber_ping':
         
         console.log('Sending ping message...');
         let ping = await socket.sendMessage(sender, { 
-            text: '*_Pinging..._*' 
+            text: '*_𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚅2 𝙿𝙸𝙽𝙶..._*' 
         });
         
         var final = new Date().getTime();
@@ -1890,7 +1888,7 @@ case 'cyber_ping':
                         caption: formatMessage(
                             '⚙️ STATUS SETTINGS',
                             `⚙️  Auto-View: ${config.AUTO_VIEW_STATUS}\n🏮  Auto-Like: ${config.AUTO_LIKE_STATUS}\n🎥  Auto-Recording: ${config.AUTO_RECORDING}\n🐉 Like Emojis: ${config.AUTO_LIKE_EMOJI.join(', ')}`,
-                            '𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙻𝙾𝙳 𝙵𝚁𝙴𝙴 𝙱𝙾𝚃'
+                            '𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙻𝙾𝙺𝚄 𝚁𝙸𝙺𝙾 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚅2'
                         )
                     });
              break;
@@ -1910,7 +1908,7 @@ case 'cyber_ping':
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                            '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
                         )
                     });
                     break;
@@ -1923,7 +1921,7 @@ case 'cyber_ping':
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                    '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
                 )
             });
         }
@@ -2180,9 +2178,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '⛩️ 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐋𝐄𝐆𝐈𝐎𝐍 𝐎𝐅 𝐃𝐎𝐎𝐌 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐁𝐘 PASIYA 𝐌𝐃 🐉',
+                            '⛩️ 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐋𝐎𝐊𝐔 𝐑𝐈𝐊𝐎 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐕2🐉',
                             `✅ Successfully connected!\n\n🔢 Number: ${sanitizedNumber}\n\n📋`,
-                            '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                            '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
                         )
                     });
 
@@ -2238,7 +2236,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 is running',
+        message: '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2 is running',
         activesession: activeSockets.size
     });
 });
@@ -2390,7 +2388,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '𝘓𝘌𝘎𝘐𝘖𝘕 𝘖𝘍 𝘋𝘖𝘖𝘔 PASIYA-MD  𝘔𝘐𝘕𝘐 𝘉𝘖𝘛'
+                    '𝘓𝘖𝘒𝘜 𝘙𝘐𝘒𝘖 𝘔𝘐𝘕𝘐 𝘉𝘖𝘛 𝘝2'
                 )
             });
         }
@@ -2445,7 +2443,7 @@ process.on('exit', () => {
 
 process.on('uncaughtException', (err) => {
     console.error('Uncaught exception:', err);
-    exec(`pm2 restart ${process.env.PM2_NAME || '𝘓𝘌𝘎𝘐𝘖𝘕-𝘖𝘍-𝘋𝘖𝘖𝘔-𝘚𝘖𝘓𝘖-𝘔𝘐𝘕𝘐-𝘉𝘖𝘛-session'}`);
+    exec(`pm2 restart ${process.env.PM2_NAME || '𝘓𝘖𝘒𝘜-𝘙𝘐𝘒𝘖-𝘔𝘐𝘕𝘐-𝘉𝘖𝘛-𝘝2-session'}`);
 });
 
 autoReconnectFromGitHub();

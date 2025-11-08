@@ -3,7 +3,7 @@ const fs = require('fs')
 //~~~~~~~~~~~ Settings Owner ~~~~~~~~~~~//
 global.owner = "94751645330"
 global.developer = "94751645330"
-global.bot = ""
+global.bot = "WHATSAPP BOT"
 global.devname = "cybar loku riko"
 global.ownername = "cybar loku riko"
 global.botname = "LOKU RIKO MINI BOT V2"

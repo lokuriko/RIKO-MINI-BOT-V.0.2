@@ -47,7 +47,7 @@ ven(
         group: "loku riko mini bot v2 support groop",
         owner: "Cybar loku riko",
         convert: "",
-        search: "",
+        search: "menu",
       };
 
       for (let i = 0; i < commands.length; i++) {

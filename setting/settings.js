@@ -16,7 +16,7 @@ global.linktt = "  8"
 global.linktele = "me"
 
 //~~~~~~~~~~~ Settings Bot ~~~~~~~~~~~//
-global.prefix = ["","!",".",",","#","/","🎭","〽️"]
+global.prefix = [","!",".",",","#","/","🎭","〽️"]
 global.autoRecording = false
 global.autoTyping = true
 global.autorecordtype = false
